@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFM and PIG Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FFM and PIG Calculator</h1>
+        <div class="input-group">
+            <label for="dryBulbTemp">Dry Bulb Temperature (°F)</label>
+            <input type="number" id="dryBulbTemp" placeholder="Enter temperature">
+        </div>
+        <div class="input-group">
+            <label for="relativeHumidity">Relative Humidity (%)</label>
+            <input type="number" id="relativeHumidity" placeholder="Enter humidity">
+        </div>
+        <div class="input-group">
+            <label for="month">Month</label>
+            <select id="month">
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="time">Time of Day</label>
+            <select id="time">
+                <option value="800">08:00</option>
+                <option value="1000">10:00</option>
+                <option value="1200">12:00</option>
+                <option value="1400">14:00</option>
+                <option value="1600">16:00</option>
+                <option value="1800">18:00</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="shade">Shade</label>
+            <select id="shade">
+                <option value="unshaded">Unshaded (<50%)</option>
+                <option value="shaded">Shaded (>50%)</option>
+            </select>
+        </div>
+        <button id="calculateBtn">Calculate</button>
+        <div class="result">
+            <h2>Results</h2>
+            <p>Fine Fuel Moisture (FFM): <span id="ffmResult">-</span></p>
+            <p>Probability of Ignition (PIG): <span id="pigResult">-</span></p>
+        </div>
+    </div>
+</body>
+</html>
